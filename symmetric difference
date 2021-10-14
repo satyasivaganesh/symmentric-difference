@@ -1,0 +1,22 @@
+M=int(input())
+aM=map(int,input().split())
+N=int(input())
+bM=map(int,input().split())
+t=[]
+A=[]
+B=[]
+for i in aM:
+    if i not in A:
+        A.append(i)
+for j in bM:
+    if j not in B:
+        B.append(j)
+for i in A:
+    if i not in B:
+        t.append(i)
+for i in B:
+    if i not in A:
+        t.append(i)
+t.sort()
+for i in t:
+    print(i)
